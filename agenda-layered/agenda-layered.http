@@ -1,0 +1,32 @@
+POST http://localhost:8080/events
+Content-Type: application/json
+
+{
+  "title": "Reunião de Equipe",
+  "description": "Discussão sobre o projeto layered",
+  "date": "2025-08-22T10:00:00"
+}
+
+###
+
+GET http://localhost:8080/events
+
+###
+
+PUT http://localhost:8080/events/{{eventId}}
+Content-Type: application/json
+
+{
+  "title": "Reunião de Equipe Atualizada",
+  "description": "Discussão sobre o projeto layered atualizado",
+  "date": "2025-08-23T11:00:00"
+}
+
+###
+
+DELETE http://localhost:8080/events/{{eventId}}
+
+# Notas:
+# - Substitua {{eventId}} pelo ID real de um evento obtido da resposta do GET ou POST.
+# - As requisições estão separadas por '###' para execução sequencial no REST Client.
+# - Certifique-se de que o servidor esteja rodando em localhost:8080.
