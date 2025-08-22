@@ -1,0 +1,31 @@
+POST http://localhost:8080/commands/events
+Content-Type: application/json
+
+{
+  "title": "Reunião de Equipe",
+  "description": "Discussão sobre o projeto CQRS",
+  "date": "2025-08-22T10:00:00"
+}
+
+###
+
+GET http://localhost:8080/queries/events
+
+###
+
+PUT http://localhost:8080/commands/events/{{eventId}}
+Content-Type: application/json
+
+{
+  "title": "Reunião de Equipe Atualizada",
+  "description": "Discussão sobre o projeto CQRS atualizado",
+  "date": "2025-08-23T11:00:00"
+}
+
+###
+
+DELETE http://localhost:8080/commands/events/{{eventId}}
+
+# Notas:
+# - Substitua {{eventId}} pelo ID real de um evento obtido da resposta do GET ou POST.
+# - Certifique-se de que o servidor esteja rodando em localhost:8080.
